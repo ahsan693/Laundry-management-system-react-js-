@@ -37,7 +37,7 @@ const DeliveryFeatures = () => {
                 <h3 className="feature-title">{feature.title}</h3>
                 <p className="feature-subtitle">{feature.subtitle}</p>
                 <p className="feature-description">{feature.description}</p>
-                <a href="#" className="read-more">Read More →</a>
+                <a href="/services" className="read-more">Read More →</a>
               </div>
             </div>
           ))}

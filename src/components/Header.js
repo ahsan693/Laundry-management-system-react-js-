@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDarkMode } from '../context/DarkModeContext';
 import './Header.css';
 
 const Header = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className="header">
@@ -19,16 +28,27 @@ const Header = () => {
           </span>
         </div>
 
-        <nav className="nav-menu">
-          <a href="#home" className="nav-link">HOME PAGE</a>
-          <a href="#features" className="nav-link">FEATURES</a>
-          <a href="#about" className="nav-link">ABOUT</a>
-          <a href="#services" className="nav-link">SERVICES</a>
-          <a href="#pricing" className="nav-link">PRICING</a>
-          <a href="#testimonials" className="nav-link">TESTIMONIALS</a>
-          <a href="#news" className="nav-link">NEWS</a>
-          <a href="#contacts" className="nav-link">CONTACTS</a>
+        <button className="mobile-menu-toggle" onClick={toggleMobileMenu} aria-label="Toggle menu">
+          <span className={`hamburger ${isMobileMenuOpen ? 'active' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+
+        <nav className={`nav-menu ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <button className="mobile-close" onClick={closeMobileMenu}>×</button>
+          <a href="#home" className="nav-link" onClick={closeMobileMenu}>HOME PAGE</a>
+          <a href="#features" className="nav-link" onClick={closeMobileMenu}>FEATURES</a>
+          <a href="#about" className="nav-link" onClick={closeMobileMenu}>ABOUT</a>
+          <a href="#services" className="nav-link" onClick={closeMobileMenu}>SERVICES</a>
+          <a href="#pricing" className="nav-link" onClick={closeMobileMenu}>PRICING</a>
+          <a href="#testimonials" className="nav-link" onClick={closeMobileMenu}>TESTIMONIALS</a>
+          <a href="#news" className="nav-link" onClick={closeMobileMenu}>NEWS</a>
+          <a href="#contacts" className="nav-link" onClick={closeMobileMenu}>CONTACTS</a>
         </nav>
+
+        {isMobileMenuOpen && <div className="mobile-overlay" onClick={closeMobileMenu}></div>}
 
         <div className="header-right">
           <div className="contact-info">

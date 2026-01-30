@@ -39,33 +39,33 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Services</h3>
           <ul className="footer-links">
-            <li><a href="#">Wash & Fold Service</a></li>
-            <li><a href="#">Dry Cleaning</a></li>
-            <li><a href="#">Commercial Laundry</a></li>
-            <li><a href="#">Self-Service Laundromat</a></li>
-            <li><a href="#">Ironing & Pressing</a></li>
+            <li><a href="#services">Wash & Fold Service</a></li>
+            <li><a href="#services">Dry Cleaning</a></li>
+            <li><a href="#services">Commercial Laundry</a></li>
+            <li><a href="#services">Self-Service Laundromat</a></li>
+            <li><a href="#services">Ironing & Pressing</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3 className="footer-title">Customer Care</h3>
           <ul className="footer-links">
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">News & Articles</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#contacts">Contact Us</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#news">News & Articles</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
           </ul>
         </div>
 
         <div className="footer-section">
           <h3 className="footer-title">Call Now for Services!</h3>
           <p className="footer-phone">+92 349 893 2839</p>
-          <a href="#" className="footer-email">📧 Email Us</a>
+          <a href="mailto:info@laundrycity.pk" className="footer-email">📧 Email Us</a>
           <div className="footer-address">
             <p className="address-title">LaundryCity Islamabad</p>
             <p className="address-text">H-9, Islamabad, Pakistan</p>
-            <a href="#" className="get-direction">📍 Get Direction</a>
+            <a href="https://maps.google.com/?q=H-9,Islamabad,Pakistan" target="_blank" rel="noopener noreferrer" className="get-direction">📍 Get Direction</a>
           </div>
         </div>
       </div>

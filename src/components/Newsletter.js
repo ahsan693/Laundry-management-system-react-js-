@@ -25,10 +25,10 @@ const Newsletter = () => {
           <button type="submit" className="newsletter-btn">Sign Up</button>
         </form>
         <div className="social-icons">
-          <a href="#" className="social-icon facebook">f</a>
-          <a href="#" className="social-icon google">G+</a>
-          <a href="#" className="social-icon twitter">🐦</a>
-          <a href="#" className="social-icon youtube">▶</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon facebook">f</a>
+          <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="social-icon google">G+</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon twitter">🐦</a>
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-icon youtube">▶</a>
         </div>
       </div>
     </section>

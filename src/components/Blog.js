@@ -37,7 +37,7 @@ const Blog = () => {
                 <h3 className="blog-title">{article.title}</h3>
                 <p className="blog-date">{article.date}</p>
                 <p className="blog-description">{article.description}</p>
-                <a href="#" className="blog-read-more">Read More →</a>
+                <a href="/blog" className="blog-read-more">Read More →</a>
               </div>
             </div>
           ))}
