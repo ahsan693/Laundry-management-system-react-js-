@@ -1,3 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +15,143 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #eee;
+}
+
+body.dark-mode .header {
+  background: #16213e;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .logo-laundry,
+body.dark-mode .nav-link,
+body.dark-mode .hours-text,
+body.dark-mode .phone-text {
+  color: #eee;
+}
+
+body.dark-mode .nav-link:hover {
+  color: #4FC3F7;
+}
+
+body.dark-mode .featured-services,
+body.dark-mode .pricing,
+body.dark-mode .testimonials {
+  background: #0f3460;
+}
+
+body.dark-mode .service-card,
+body.dark-mode .pricing-card,
+body.dark-mode .testimonial-card,
+body.dark-mode .feature-card,
+body.dark-mode .blog-card {
+  background: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .service-title,
+body.dark-mode .service-subtitle,
+body.dark-mode .pricing-amount .price-value,
+body.dark-mode .pricing-amount .price-unit,
+body.dark-mode .feature-title,
+body.dark-mode .feature-subtitle,
+body.dark-mode .blog-title,
+body.dark-mode .section-title,
+body.dark-mode .testimonials-title,
+body.dark-mode .promise-section-title,
+body.dark-mode .mobile-app-title,
+body.dark-mode .self-service-title,
+body.dark-mode .how-it-works-subtitle,
+body.dark-mode .services-love-subtitle,
+body.dark-mode .step-title,
+body.dark-mode .service-love-title,
+body.dark-mode .promise-title {
+  color: #eee;
+}
+
+body.dark-mode .service-description,
+body.dark-mode .feature-description,
+body.dark-mode .blog-description,
+body.dark-mode .testimonial-text,
+body.dark-mode .promise-description,
+body.dark-mode .services-love-description,
+body.dark-mode .how-it-works-description,
+body.dark-mode .step-subtitle,
+body.dark-mode .service-love-subtitle {
+  color: #bbb;
+}
+
+body.dark-mode .services-you-love,
+body.dark-mode .mobile-app,
+body.dark-mode .blog,
+body.dark-mode .our-promise {
+  background: #1a1a2e;
+}
+
+body.dark-mode .how-it-works {
+  background: linear-gradient(to bottom, #0f3460 0%, #1a1a2e 100%);
+}
+
+body.dark-mode .delivery-features {
+  background: #16213e;
+}
+
+body.dark-mode .footer {
+  background: #0f0f1e;
+}
+
+body.dark-mode .footer-bottom {
+  background: #060610;
+}
+
+body.dark-mode .dark-mode-toggle {
+  border-color: #FDD835;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background: #FDD835;
+}
+
+/* Global Responsive Utilities */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Prevent horizontal scrolling on mobile */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Better touch targets for mobile */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve readability on small screens */
+  p {
+    line-height: 1.6;
+  }
 }
